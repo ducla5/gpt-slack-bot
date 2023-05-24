@@ -21,6 +21,7 @@ const model = process.env.OPENAI_MODEL || 'gpt-4'
 app.message('write code: ', async ({ message, say }) => {
     // say() sends a message to the channel where the event was triggered
     let response  = `<@${message.user}>\n`
+    
     response += `You ask: \`${message.text}\`\n`
     response += "and the devil said: "
     rep = await getReponse(message.text, message.user);
