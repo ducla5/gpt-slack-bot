@@ -17,6 +17,7 @@ const openAI = new OpenAI(process.env.OPENAI_KEY);
 const model = process.env.OPENAI_MODEL || 'gpt-4'
 
 // Listens to incoming message contain code
+
 app.message('write code: ', async ({ message, say }) => {
     // say() sends a message to the channel where the event was triggered
     let response  = `<@${message.user}>\n`
